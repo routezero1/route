@@ -40,6 +40,25 @@ class PostsController < ApplicationController
         redirect_to root_path
     end
     
+    def contact
+    end
+  
+    def request_contact
+        name = params[:name]
+        email = params[:email]
+        telephone = params[:telephone]
+        message = params[:message]
+
+        if email.blank?
+            flash[:alert] = I18n.t('posts.request_contact.no_email')
+        else
+            ###
+            flash[:notice] = I18n.t('posts.request_contact.email_sent')
+        end
+
+        redirect_to root_path
+    end
+    
     private
         def find_post
             @post = Post.find(params[:id])

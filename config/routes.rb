@@ -5,4 +5,8 @@ Rails.application.routes.draw do
   end
   
   root 'posts#index'
+  
+  get 'contact', to: 'posts#contact'
+  post 'request_contact', to: 'posts#request_contact'
+  
 end
