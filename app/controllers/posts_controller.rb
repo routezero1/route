@@ -52,7 +52,7 @@ class PostsController < ApplicationController
         if email.blank?
             flash[:alert] = I18n.t('posts.request_contact.no_email')
         else
-            ###
+            ContactMailer.contact_email(email, name, telephone, message).deliver_now
             flash[:notice] = I18n.t('posts.request_contact.email_sent')
         end
 
