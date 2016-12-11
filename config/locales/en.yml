@@ -3,6 +3,10 @@ en:
     app_description: Hello dreamboat, shall we chat?
     
     posts:
+        index:
+            title: My Notes
+            welcome: Welcome to Route
+    
         contact:
             title: Contact Us
             contact_us: Complete the following form to get in touch with us.
