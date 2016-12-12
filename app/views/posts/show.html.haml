@@ -1,32 +1,32 @@
 #post_show
     %h1= @post.title
     %p.username
-        Shared by
+        =  t('.shared_by')
         = @post.user.name
-        about
+        =  t('.about')
         = time_ago_in_words(@post.created_at)
     .clearfix  
         .post_image_description
             = image_tag @post.image.url(:medium)
             .description= simple_format(@post.description)
         .post_data
-            = link_to "Visit link", @post.link, class: "button"
+            = link_to t('.visit_link'), @post.link, class: "button"
             = link_to like_post_path(@post), method: :get, class: "data" do
                 %i.fa.fa-thumbs-o-up
-                = pluralize(@post.get_upvotes.size, "Like")
+                = pluralize(@post.get_upvotes.size, t('.like'))
             = link_to dislike_post_path(@post), method: :get, class: "data" do
                 %i.fa.fa-thumbs-o-down
-                = pluralize(@post.get_downvotes.size, "Dislike")            
+                = pluralize(@post.get_downvotes.size, t('.dislike'))            
             %p.data
                 %i.fa.fa-comments-o
-                = pluralize(@post.comments.count, "Comment")
+                = pluralize(@post.comments.count, t('.comment'))
             - if @post.user == current_user
-                = link_to "Edit", edit_post_path(@post), class: "data"
-                = link_to "Delete", post_path(@post), method: :delete, data: { confrim: "Are you sure" }, class: "data"
+                = link_to t('.edit'), edit_post_path(@post), class: "data"
+                = link_to t('.delete'), post_path(@post), method: :delete, data: { confirm: t('.confirm') }, class: "data"
             
 
 #comments
-    %h2.comment_count= pluralize(@post.comments.count, "Comment")
+    %h2.comment_count= pluralize(@post.comments.count, t('.comment'))
     - @comments.each do |comment|
         .comment
             %p.username= comment.user.name

@@ -1,15 +1,15 @@
 %p= "Dear #{t('app_title')},"
-%p= "Could you get in touch with me please?"
+%p= t('.ask1')
 
 %dl
-    %dt Name:
+    %dt= t('.name1')
     %dd= @name
-    %dt Email:
+    %dt= t('.email1')
     %dd= @email
-    %dt Telephone:
+    %dt= t('.telephone')
     %dd= @telephone
 
 %p= @message
 
-%p Thanks,
+%p= t('.ty')
 %p= @name

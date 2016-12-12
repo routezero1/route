@@ -4,9 +4,29 @@ en:
     
     posts:
         index:
-            title: My Notes
-            welcome: Welcome to Route
-    
+            title_signed_in: Hello
+            title_signed_out: Which Route Will You Take?
+            welcome: Share your inspiration or see what's inspiring others.
+            shared: Shared by
+            
+        edit:
+            title: Edit Post
+            
+        new:
+            new_post: Creating a new post?
+            fill: Please make sure to fill in all sections
+        
+        show:
+            shared_by: Shared by
+            about: about
+            visit_link: Visit link
+            like: Like
+            dislike: Dislike
+            edit: Edit
+            comment: Comment
+            delete: Delete
+            confirm: Are you sure
+        
         contact:
             title: Contact Us
             contact_us: Complete the following form to get in touch with us.
@@ -24,3 +44,26 @@ en:
         request_contact:
             no_email: You must supply an email address
             email_sent: Thank you. We will be in touch shortly.
+    
+    layouts:
+        footer:
+            contact: Contact Us
+        
+        header:
+            sign_in: Sign In
+            sign_up: Sign Up
+            inspiration: Add New Inspiration
+            this_title: Route
+    
+    contact_mailer:
+        contact_email:
+            ask1: Could you get in touch with me please?
+            name1: "Name:"
+            email1: "Email:"
+            telephone1: "Telephone:" 
+            ty: Thanks,
+    
+    comments:
+        form:
+            reply: Reply to thread
+        

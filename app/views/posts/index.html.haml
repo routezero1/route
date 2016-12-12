@@ -1,16 +1,16 @@
 - if user_signed_in?
     %p#intro
-        Hello
+        =  t('.title_signed_in')
         = current_user.name
         %br/
         %span
-            Share your inspiration or see what's inspiring others.
+            =  t('.welcome')
 - else
     %p#intro
-        Which Route Will You Take?
+        =  t('.title_signed_out')
         %br/
         %span
-            Share your inspiration or see what's inspiring others.
+            =  t('.welcome')
 
 #posts
     - @posts.each do |post|
@@ -22,7 +22,7 @@
                     %h2= link_to post.title, post
                 .data.clearfix
                     %p.username
-                        Shared by
+                        =  t('.shared')
                         = post.user.name
                     %p.buttons
                         %span
